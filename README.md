@@ -1,6 +1,8 @@
 # DevMob
 Projet de développement mobile EFREI Paris
 
+Framework utilisé: SwiftUI
+
 Détails des vues du projet
 
 Vues CALENDRIER:
