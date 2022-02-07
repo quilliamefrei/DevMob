@@ -1,4 +1,4 @@
-# DevMob
+#DevMob
 Projet de développement mobile EFREI Paris
 
 Framework utilisé: SwiftUI
@@ -7,8 +7,7 @@ Détails des vues du projet
 
 Vues CALENDRIER:
 - Planning du jour (PREMIERE VUE obligatoirement)
-- Planning par semaine (cf app calendrier sur iPhone)
-- Selection du mois pour afficher le planning (liste déroulante pour année)
+- Planning par semaine (cf app calendrier sur iPhone) -- à supprimer ? CAR planning sur 2 jours
 
 Vue détaillé EVENEMENT:
 - Accessible via clic sur une des vues CALENDRIER
@@ -21,3 +20,5 @@ Vue détaillé EVENEMENT:
 BONUS:
 - Ajout d’évènement
     - Idée: fichier JSON en tant que BDD
+
+Token API : keyPKn8B0EAKwScNU
