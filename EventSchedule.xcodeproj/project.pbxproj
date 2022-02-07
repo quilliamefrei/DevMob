@@ -16,6 +16,10 @@
 		166456EF27A830FC009F1C41 /* EventScheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166456EE27A830FC009F1C41 /* EventScheduleUITests.swift */; };
 		166456F127A830FC009F1C41 /* EventScheduleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166456F027A830FC009F1C41 /* EventScheduleUITestsLaunchTests.swift */; };
 		1664570827A84E7B009F1C41 /* EventUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1664570727A84E7B009F1C41 /* EventUIViewController.swift */; };
+		F8A24E5927B153BB0034D2FC /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5827B153BB0034D2FC /* ModelData.swift */; };
+		F8A24E5B27B154FE0034D2FC /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5A27B154FE0034D2FC /* Record.swift */; };
+		F8A24E5D27B1701C0034D2FC /* DataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5C27B1701C0034D2FC /* DataProtocol.swift */; };
+		F8A24E5F27B1754F0034D2FC /* LaunchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5E27B1754F0034D2FC /* LaunchTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		166456EE27A830FC009F1C41 /* EventScheduleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScheduleUITests.swift; sourceTree = "<group>"; };
 		166456F027A830FC009F1C41 /* EventScheduleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScheduleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1664570727A84E7B009F1C41 /* EventUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventUIViewController.swift; sourceTree = "<group>"; };
+		F8A24E5827B153BB0034D2FC /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		F8A24E5A27B154FE0034D2FC /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		F8A24E5C27B1701C0034D2FC /* DataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProtocol.swift; sourceTree = "<group>"; };
+		F8A24E5E27B1754F0034D2FC /* LaunchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,10 @@
 		166456C127A830F8009F1C41 = {
 			isa = PBXGroup;
 			children = (
+				F8A24E5E27B1754F0034D2FC /* LaunchTest.swift */,
+				F8A24E5C27B1701C0034D2FC /* DataProtocol.swift */,
+				F8A24E5A27B154FE0034D2FC /* Record.swift */,
+				F8A24E5827B153BB0034D2FC /* ModelData.swift */,
 				166456CC27A830F8009F1C41 /* EventSchedule */,
 				166456E327A830FC009F1C41 /* EventScheduleTests */,
 				166456ED27A830FC009F1C41 /* EventScheduleUITests */,
@@ -267,6 +279,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1664570827A84E7B009F1C41 /* EventUIViewController.swift in Sources */,
+				F8A24E5D27B1701C0034D2FC /* DataProtocol.swift in Sources */,
+				F8A24E5927B153BB0034D2FC /* ModelData.swift in Sources */,
+				F8A24E5F27B1754F0034D2FC /* LaunchTest.swift in Sources */,
+				F8A24E5B27B154FE0034D2FC /* Record.swift in Sources */,
 				166456CE27A830F8009F1C41 /* AppDelegate.swift in Sources */,
 				166456D027A830F8009F1C41 /* SceneDelegate.swift in Sources */,
 			);
