@@ -24,7 +24,6 @@
 		F8A24E5927B153BB0034D2FC /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5827B153BB0034D2FC /* ModelData.swift */; };
 		F8A24E5B27B154FE0034D2FC /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5A27B154FE0034D2FC /* Record.swift */; };
 		F8A24E5D27B1701C0034D2FC /* DataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5C27B1701C0034D2FC /* DataProtocol.swift */; };
-		F8A24E5F27B1754F0034D2FC /* LaunchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5E27B1754F0034D2FC /* LaunchTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		F8A24E5827B153BB0034D2FC /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		F8A24E5A27B154FE0034D2FC /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		F8A24E5C27B1701C0034D2FC /* DataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProtocol.swift; sourceTree = "<group>"; };
-		F8A24E5E27B1754F0034D2FC /* LaunchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +95,6 @@
 		166456C127A830F8009F1C41 = {
 			isa = PBXGroup;
 			children = (
-				F8A24E5E27B1754F0034D2FC /* LaunchTest.swift */,
 				F8A24E5C27B1701C0034D2FC /* DataProtocol.swift */,
 				F8A24E5A27B154FE0034D2FC /* Record.swift */,
 				F8A24E5827B153BB0034D2FC /* ModelData.swift */,
@@ -293,7 +290,6 @@
 				16C1ECC627BAB2E400C6D4C2 /* CalendarHelper.swift in Sources */,
 				F8A24E5D27B1701C0034D2FC /* DataProtocol.swift in Sources */,
 				F8A24E5927B153BB0034D2FC /* ModelData.swift in Sources */,
-				F8A24E5F27B1754F0034D2FC /* LaunchTest.swift in Sources */,
 				F8A24E5B27B154FE0034D2FC /* Record.swift in Sources */,
 				166456CE27A830F8009F1C41 /* AppDelegate.swift in Sources */,
 				166456D027A830F8009F1C41 /* SceneDelegate.swift in Sources */,

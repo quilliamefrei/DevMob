@@ -18,29 +18,42 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var nextDayButton: UIButton!
     
     var hours = [Int]()
-    let dateStr = "15/11/2019"
-    var dateFormatter = DateFormatter()
-    var dateFormatterTEST = DateFormatter()
+    var dateFormatterEVENT = DateFormatter()
     var eventsList = [Event]()
     var selectedDate = Date()
     
-	override func viewDidLoad()
+	override func viewDidLoad ()
 	{
 		super.viewDidLoad()
-        dateFormatter.dateFormat = "dd/MM/yy"
-        dateFormatterTEST.dateFormat = "dd/MM/yy'T'HH:mm:ss"
-        selectedDate = dateFormatter.date(from: dateStr)!
-        let event1 = Event(id: 1, name: "EVENT_NUM_1", date: (dateFormatterTEST.date(from: "15/11/2019T15:30:00")!), speaker: "Remi RIANDIERE", location: "Amphi")
-        let event2 = Event(id: 1, name: "EVENT_NUM_2", date: (dateFormatterTEST.date(from: "15/11/2019T09:30:00")!), speaker: "Quilliam LECOQ", location: "B007")
-        let event3 = Event(id: 2, name: "EVENT_NUM_3", date: (dateFormatterTEST.date(from: "16/11/2019T11:00:00")!), speaker: "Quentin VILCOT", location: "Cafet")
-        eventsList.append(event1)
-        eventsList.append(event2)
-        eventsList.append(event3)
+        let dateStr = "2019-11-15T08:00:00.000Z"
+        dateFormatterEVENT.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        selectedDate = dateFormatterEVENT.date(from: dateStr)!
+        getSchedule()
+        sleep(1)
 		initTime()
 		setDayView()
-        let launch = LaunchTest()
-        launch.main()
 	}
+    
+    func getSchedule(){
+        let modelData = ModelData()
+        modelData.getScheduleList { (errorHandle, schedules) in
+            
+            if let _ = errorHandle.errorType, let errorMessage =
+                 errorHandle.errorMessage {
+                    print(errorMessage)
+                }
+            
+            else {
+                for schedule in schedules ?? []{
+                    let neweventDate = self.dateFormatterEVENT.date(from: schedule.fields.start)!
+                    let speaker = schedule.fields.speakers?[0]
+                    let location =  schedule.fields.location?[0]
+                    let newEvent = Event(id: schedule.id, name: schedule.fields.activity, date: neweventDate , speaker: speaker ?? "UNDEFINED", location: location ?? "UNDEFINED")
+                    self.eventsList.append(newEvent)
+                }
+            }
+        }
+    }
 	
 	func initTime()
 	{
@@ -52,11 +65,11 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	func setDayView()
 	{
-        let firstDay = dateFormatter.date(from: "15/11/2019")!
+        let firstDay = dateFormatterEVENT.date(from: "2019-11-15T08:00:00.000Z")!
         if(selectedDate > firstDay){
             previousDayButton.isHidden = false
             nextDayButton.isHidden = true
-        } else{
+        } else if(selectedDate==firstDay){
             previousDayButton.isHidden = true
             nextDayButton.isHidden = false
         }
@@ -86,12 +99,15 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var daysEvents = [Event]()
         for event in eventsList
         {
-            print(event.date)
-            //print(date)
-            if(event.date == date)
-            {
+            var order = Calendar.current.compare(date, to: event.date, toGranularity: .day)
+
+            switch order {
+            case .orderedDescending:
+                break
+            case .orderedAscending:
+                break
+            case .orderedSame:
                 let eventHour = CalendarHelper().hourFromDate(date: event.date)
-                print(eventHour)
                 if eventHour == hour
                 {
                     daysEvents.append(event)
@@ -136,7 +152,7 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	@IBAction func nextDayAction(_ sender: Any)
 	{
-        let secondDay = dateFormatter.date(from: "16/11/2019")!
+        let secondDay = dateFormatterEVENT.date(from: "2019-11-16T08:00:00.000Z")!
         if(selectedDate < secondDay){
             selectedDate = CalendarHelper().addDays(date: selectedDate, days: 1)
             setDayView()
@@ -145,7 +161,7 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	@IBAction func previousDayAction(_ sender: Any)
 	{
-        let firstDay = dateFormatter.date(from: "15/11/2019")!
+        let firstDay = dateFormatterEVENT.date(from: "2019-11-15T08:00:00.000Z")!
         if(selectedDate > firstDay){
             selectedDate = CalendarHelper().addDays(date: selectedDate, days: -1)
             setDayView()
