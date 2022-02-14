@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  EventSchedule
+//  CalendarExampleTutorial
 //
-//  Created by Rémi Riandiere on 31/01/2022.
+//  Created by CallumHill on 14/1/21.
 //
 
 import UIKit
