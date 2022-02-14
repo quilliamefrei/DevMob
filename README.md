@@ -1,6 +1,6 @@
-RIANDIERE Rémi
-VOICU Andrei
-VILCOT Quentin
+RIANDIERE Rémi -
+VOICU Andrei -
+VILCOT Quentin -
 LECOQ  Quilliam
 
 #DevMob
