@@ -15,7 +15,12 @@
 		166456E527A830FC009F1C41 /* EventScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166456E427A830FC009F1C41 /* EventScheduleTests.swift */; };
 		166456EF27A830FC009F1C41 /* EventScheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166456EE27A830FC009F1C41 /* EventScheduleUITests.swift */; };
 		166456F127A830FC009F1C41 /* EventScheduleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166456F027A830FC009F1C41 /* EventScheduleUITestsLaunchTests.swift */; };
-		1664570827A84E7B009F1C41 /* EventUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1664570727A84E7B009F1C41 /* EventUIViewController.swift */; };
+		16C1ECC627BAB2E400C6D4C2 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C1ECC527BAB2E400C6D4C2 /* CalendarHelper.swift */; };
+		16C1ECC827BAB2EE00C6D4C2 /* DailyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C1ECC727BAB2EE00C6D4C2 /* DailyCell.swift */; };
+		16C1ECCA27BAB2F700C6D4C2 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C1ECC927BAB2F700C6D4C2 /* DailyViewController.swift */; };
+		16C1ECCC27BAB30400C6D4C2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C1ECCB27BAB30400C6D4C2 /* Event.swift */; };
+		16C1ECCF27BAB31900C6D4C2 /* EventInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C1ECCD27BAB31900C6D4C2 /* EventInfoViewController.swift */; };
+		16C1ECD027BAB31900C6D4C2 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C1ECCE27BAB31900C6D4C2 /* EventCell.swift */; };
 		F8A24E5927B153BB0034D2FC /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5827B153BB0034D2FC /* ModelData.swift */; };
 		F8A24E5B27B154FE0034D2FC /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5A27B154FE0034D2FC /* Record.swift */; };
 		F8A24E5D27B1701C0034D2FC /* DataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A24E5C27B1701C0034D2FC /* DataProtocol.swift */; };
@@ -52,7 +57,12 @@
 		166456EA27A830FC009F1C41 /* EventScheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventScheduleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		166456EE27A830FC009F1C41 /* EventScheduleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScheduleUITests.swift; sourceTree = "<group>"; };
 		166456F027A830FC009F1C41 /* EventScheduleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScheduleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1664570727A84E7B009F1C41 /* EventUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventUIViewController.swift; sourceTree = "<group>"; };
+		16C1ECC527BAB2E400C6D4C2 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		16C1ECC727BAB2EE00C6D4C2 /* DailyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCell.swift; sourceTree = "<group>"; };
+		16C1ECC927BAB2F700C6D4C2 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		16C1ECCB27BAB30400C6D4C2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		16C1ECCD27BAB31900C6D4C2 /* EventInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoViewController.swift; sourceTree = "<group>"; };
+		16C1ECCE27BAB31900C6D4C2 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		F8A24E5827B153BB0034D2FC /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		F8A24E5A27B154FE0034D2FC /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		F8A24E5C27B1701C0034D2FC /* DataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProtocol.swift; sourceTree = "<group>"; };
@@ -111,7 +121,12 @@
 		166456CC27A830F8009F1C41 /* EventSchedule */ = {
 			isa = PBXGroup;
 			children = (
-				166456FD27A83719009F1C41 /* Controller */,
+				16C1ECCE27BAB31900C6D4C2 /* EventCell.swift */,
+				16C1ECCD27BAB31900C6D4C2 /* EventInfoViewController.swift */,
+				16C1ECCB27BAB30400C6D4C2 /* Event.swift */,
+				16C1ECC927BAB2F700C6D4C2 /* DailyViewController.swift */,
+				16C1ECC727BAB2EE00C6D4C2 /* DailyCell.swift */,
+				16C1ECC527BAB2E400C6D4C2 /* CalendarHelper.swift */,
 				166456CD27A830F8009F1C41 /* AppDelegate.swift */,
 				166456CF27A830F8009F1C41 /* SceneDelegate.swift */,
 				166456D327A830F8009F1C41 /* Main.storyboard */,
@@ -137,14 +152,6 @@
 				166456F027A830FC009F1C41 /* EventScheduleUITestsLaunchTests.swift */,
 			);
 			path = EventScheduleUITests;
-			sourceTree = "<group>";
-		};
-		166456FD27A83719009F1C41 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				1664570727A84E7B009F1C41 /* EventUIViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1664570827A84E7B009F1C41 /* EventUIViewController.swift in Sources */,
+				16C1ECCF27BAB31900C6D4C2 /* EventInfoViewController.swift in Sources */,
+				16C1ECD027BAB31900C6D4C2 /* EventCell.swift in Sources */,
+				16C1ECCC27BAB30400C6D4C2 /* Event.swift in Sources */,
+				16C1ECCA27BAB2F700C6D4C2 /* DailyViewController.swift in Sources */,
+				16C1ECC827BAB2EE00C6D4C2 /* DailyCell.swift in Sources */,
+				16C1ECC627BAB2E400C6D4C2 /* CalendarHelper.swift in Sources */,
 				F8A24E5D27B1701C0034D2FC /* DataProtocol.swift in Sources */,
 				F8A24E5927B153BB0034D2FC /* ModelData.swift in Sources */,
 				F8A24E5F27B1754F0034D2FC /* LaunchTest.swift in Sources */,
