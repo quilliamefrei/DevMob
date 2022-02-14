@@ -1,3 +1,8 @@
+RIANDIERE Rémi
+VOICU Andrei
+VILCOT Quentin
+LECOQ  Quilliam
+
 #DevMob
 Projet de développement mobile EFREI Paris
 
@@ -17,8 +22,6 @@ Vue détaillé EVENEMENT:
     - Speaker = pareil qu’au dessus, mais pour le présentateur
     - Topic/Theme = pareil mais pour les topics (affichent les events liés à ce topic)
 
-BONUS:
-- Ajout d’évènement
-    - Idée: fichier JSON en tant que BDD
 
 Token API : keyPKn8B0EAKwScNU
+
