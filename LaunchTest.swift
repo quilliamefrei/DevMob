@@ -9,18 +9,22 @@ import Foundation
 import UIKit
 
 class LaunchTest {
-
-    let modelData = ModelData()
-    
-    modelData.getScheduleList { (errorHandle, schedules) in
-        if let _ = errorHandle.errorType, let errorMessage = errorHandle.errorMessage {
-            print(errorMessage)
-        }
-        else if let list = schedules, let schedule = list.last {
-            print(schedule.id)
-        }
-        else {
-            print("Houston we got a problem")
+    func main() {
+        print("coucou")
+        let modelData = ModelData()
+        
+        modelData.getScheduleList { (errorHandle, schedules) in
+            
+            if let _ = errorHandle.errorType, let errorMessage =
+                 errorHandle.errorMessage {
+                    print(errorMessage)
+                }
+            
+            else {
+                for schedule in schedules ?? []{
+                    print(schedule)
+                }
+            }
         }
     }
 }

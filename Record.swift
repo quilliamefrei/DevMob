@@ -22,12 +22,22 @@ struct Schedule: Codable {
 struct Fields: Codable{
     let end: String
     let activity: String
-    let typeM: String
+    let type: String
     let start: String
-    let location: [String]
-    let topics: [String]
-    let speakers: [String]
-    let notes: String
+    let location: [String]?
+    let topics: [String]?
+    let speakers: [String]?
+    let notes: String?
+    enum CodingKeys: String, CodingKey {
+        case end = "End"
+        case activity = "Activity"
+        case type = "Type"
+        case start = "Start"
+        case location = "Location"
+        case topics = "Topic / theme"
+        case speakers = "Speaker(s)"
+        case notes = "Notes"
+    }
 }
 
 enum CustomError: Error {
@@ -52,4 +62,4 @@ struct ErrorResponse: Codable {
 }
 
 let furnitureUrlStr =
- "https://api.airtable.com/v0/appurgriHL535VVAP/Furniture"
+ "https://api.airtable.com/v0/appXKn0DvuHuLw4DV/Schedule"

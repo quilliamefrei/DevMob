@@ -38,6 +38,8 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         eventsList.append(event3)
 		initTime()
 		setDayView()
+        let launch = LaunchTest()
+        launch.main()
 	}
 	
 	func initTime()
